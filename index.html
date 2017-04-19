@@ -2,41 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="Was soll ich heute zu Essen bestellen?" content="Diese Seite entscheidet für dich, was du heute zu Essen bestellen sollst">
-    <title>Soll ich heute Essen bestellen?</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <title>Was soll ich heute zu Essen bestellen?</title>
+
     <style>
-
-    html {
-      font-family: monospace;
-      font-size: 5em;
-      text-align: center;
-
-    }
-
-    ul {
-      margin: 0 auto;
-      padding: 0;
-      max-width: 500px;
-      list-style-type: none;
-    }
-
+      body {
+        font-family: monospace;
+        font-size: 3em;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        text-align: center;
+        visibility: hidden;
+      }
     </style>
+
   </head>
   <body>
-  <ul>
-    <li>Italienisch</li>
-    <li>Burger</li>
-    <li>Sushi</li>
-    <li>Griechisch</li>
-    <li>Indisch</li>
-    <li>Deutsch</li>
-    <li>Chinesisch</li>
-    <li>Mexikanisch</li>
-    <li>Türkisch</li>
-  </ul>
 
+    <ul>
+      <li id="li-1">Italienisch</li>
+      <li id="li-2">Burger</li>
+      <li id="li-3">Sushi</li>
+      <li id="li-4">Griechisch</li>
+      <li id="li-5">Indisch</li>
+      <li id="li-6">Deutsch</li>
+      <li id="li-7">Chinesisch</li>
+      <li id="li-8">Mexikanisch</li>
+      <li id="li-9">Türkisch</li>
+    </ul>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     <script>
+
+    $( document ).ready(function() {
+        var randomNumber = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+        var randomLi = "#li-" + randomNumber;
+        $(randomLi).css("visibility", "visible");
+    });
+
+
     </script>
   </body>
 </html>
